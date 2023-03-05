@@ -26,7 +26,7 @@ func init() {
 }
 func Shorten(c *gin.Context) {
 	c.Header("Context-Type", "application/x-www-form-urlencoded")
-	c.Header("Access-Control-Allow-Origin", "*")
+	// c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Access-Control-Allow-Methods", "POST")
 	c.Header("Access-Control-Allow-Headers", "Content-Type")
 	var body models.ShortenBody
