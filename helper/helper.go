@@ -19,7 +19,7 @@ import (
 
 var db *mongo.Collection 
 var ctx = context.TODO()
-var baseUrl = "http://localhost:5000/"
+var baseUrl = "https://url-shortener-service-3t2m.onrender.com/"
 
 func init() {
 	db = database.Setup()
