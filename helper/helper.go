@@ -24,6 +24,11 @@ var baseUrl = "http://localhost:5000/"
 func init() {
 	db = database.Setup()
 }
+func Str(c *gin.Context){
+	c.JSON(http.StatusOK, gin.H{
+		"msg":"Hey you are in root path",
+	})
+}
 func Shorten(c *gin.Context) {
 	c.Header("Context-Type", "application/x-www-form-urlencoded")
 	// c.Header("Access-Control-Allow-Origin", "*")

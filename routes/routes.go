@@ -7,9 +7,11 @@ import (
 
 func Routers()*gin.Engine{
 	r := gin.Default();
+	r.GET("/",helper.Str);
 	r.GET("/:code",helper.Redirect);
 	r.POST("/shorten",helper.Shorten);
 	r.POST("/custom",helper.Custom);
+	
 
 	return r ;
 }
