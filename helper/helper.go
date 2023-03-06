@@ -25,8 +25,12 @@ func init() {
 	db = database.Setup()
 }
 func Str(c *gin.Context){
+	c.Header("Context-Type", "application/x-www-form-urlencoded")
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Methods", "POST")
+	c.Header("Access-Control-Allow-Headers", "Content-Type")
 	c.JSON(http.StatusOK, gin.H{
-		"msg":"Hey you are in root path",
+		"msg":"Engine is started and connected",
 	})
 }
 func Shorten(c *gin.Context) {
