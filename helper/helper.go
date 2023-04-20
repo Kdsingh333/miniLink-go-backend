@@ -77,7 +77,7 @@ func Shorten(c *gin.Context) {
 	}
 
 	var date = time.Now()
-	var expires = date.AddDate(0,0,5)
+	var expires = date.AddDate(0,0,30)
 	var newUrl = baseUrl + urlCode
 	var docId = primitive.NewObjectID()
 	newDoc := &models.UrlDoc{
@@ -164,7 +164,7 @@ func Custom(c *gin.Context) {
 	}
 
 	var date = time.Now()
-	var expires = date.AddDate(0, 0, 5)
+	var expires = date.AddDate(0, 0, 30)
 	var newUrl = baseUrl + body.CustomCode
 	var docId = primitive.NewObjectID()
 
